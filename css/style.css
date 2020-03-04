@@ -1,114 +1,163 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#header1 {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/KOBE1.jpg);
-    height: 100vh;
+.body1 {
+    background-image: url("../img/KOBE3.png");
+    background-color: transparent;
     background-size: cover;
-    background-position: center;
+    position: fixed;  
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
-.wrapper {
-    color: black;
-    display: grid;
+.body2 {
+    background-image: url("../img/KOBE2.jpg");
+    background-color: transparent;
+    background-size: cover;
+    position: fixed;  
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
     height: 100vh;
     width: 100vw;
-   
-    grid-template-columns: 80vw 20vw;
-    grid-template-rows: 20vh 80vh;
-    grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows:  25% auto;
     grid-template-areas: 
-    'hd nav'
-    'ma ma'
-    }
+    "hd nav nav"
+    "ma ma ma";
 
-ul {
+}
+
+header {
+    display: grid;
+    grid-area: hd;
+    align-items: left;
+    justify-content: center;
+
+    
+}
+
+nav {
     grid-area: nav;
-    float: right;
-    list-style-type: none;
+    text-align: right;
     margin-top: 25px;
+    margin-right: 25px;
+    
+    
+    
 }
 
-
-ul li {
-    grid-area: nav;
-display: inline-block;
-}
-
-ul li a{
-    grid-area: nav;
+a:link {
     text-decoration: none;
+  }
+
+a {
     color: white;
-    padding: 5px 20px;
-    border: 1px solid transparent;
-    transition: 0.6s ease;
 }
 
-ul li a:hover{
-background-color: white;
-color: black;
+a:hover {
+    color: black;
 }
 
-.logo img{
-    grid-area: hd;
+.Knappar {
+        display: flex;
+        background-color: transparent;
+        font-size: 16px;
+        justify-content: flex-end;
+        transition-duration: 0.4s;
+}
+
+.Knappar button:not(:last-child) {
+    border-right: none; /* Tar bort dubbla kanter */
+  }
+
+
+
+.Knapp1:hover {
+    background: white;
+    color: black;
+}
+.Knapp2:hover {
+    background: white;
+    color: black;
+}
+.Knapp3:hover {
+    background: white;
+    color: black;
+}
+.Knapp4:hover {
+    background: white;
+    color: black;
+}
+.Knapp1 {
+    background-color: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     float: left;
-    width: 150px;
-    height: auto;
-}
+  }
 
-.main{
-    grid-area: hd;
-    max-width: 1350px;
-    margin: auto;
-}
+  .Knapp2 {
+    background-color: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: left;
+  }
 
-ul li.active a{
-    background-color: white;
-    color: black;
-}
+  
+  .Knapp3 {
+    background-color: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: left;
+  }
 
-.title { 
+  
+  .Knapp4 {
+    background-color: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: left;
+  }
+
+  
+
+  
+
+
+main {
+    display: grid;
     grid-area: ma;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    color: white
 }
 
-.title h1 {
-    color: white;
-    font-size: 70px;
+.Logga {
+    width: 150px;
+    height: auto;  
+    padding: 5px;  
 }
 
-ul li.active1 a{
-    background-color: white;
-    color: black;
-}
-
-#header2 {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/KOBE2.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.titlehistoria {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate( -50%, 50%);
-}
-
-.titlehistoria h1 {
-    color: white;
-    font-size: 70px;
-}
-
-.p1 {
-    font-size: 20px;
-    color: white;
+.Kobe1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100px;
 }
+
