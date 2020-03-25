@@ -18,15 +18,65 @@
     height: 100%;
 }
 
+.body3 {
+    background-image: url("../img/Lakersplan.jpg");
+    background-color: transparent;
+    background-size: cover;
+    position: fixed;  
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 60% 20% 20%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows:  25% auto;
     grid-template-areas: 
     "hd nav nav"
     "ma ma ma";
+}
+
+.container2 {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows:  25% auto;
+    grid-template-areas: 
+    "hd nav nav"
+    "as1 ma as2";
+}
+
+.aside1 {
+    display: grid;
+    grid-area: as1;
+    align-items: center;
+    justify-content: left;
+    margin: 10%;
+    padding-left: 50px;
+}
+
+.kobe24 { 
+width: 200px;
+height: auto;
+
+}
+
+.kobe8 {
+    width: 480px;
+    height: auto;
+}
+
+.aside2 {
+    display: grid;
+    grid-area: as2;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
+    
 }
 
 header {
@@ -42,9 +92,18 @@ nav {
     text-align: right;
     margin-top: 15px;
     margin-right: 25px;
-    
+    padding-left: 600px;
 }
 
+.main3 {
+    padding: 130px 100px;
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.lakerstext {
+font-size: 70px;
+}
 
 a {
     color: white;
@@ -113,6 +172,18 @@ a:hover {
     margin: 12px;
   }
 
+  .Knapp2-Sida3 {
+    background-color: white;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: left;
+    border: 2px solid whitesmoke;  
+    margin: 12px;
+  }
   
   .Knapp3 {
     background-color: transparent;
@@ -153,7 +224,11 @@ main {
     justify-content: center;
     color: white;
     text-align: center;
-    padding: 0px 400px;
+    padding: 0px 100px;
+}
+
+.main2 {
+    padding: 50px 100px;
 }
 
 .Logga {
@@ -171,7 +246,7 @@ main {
 
 .Kobe1p {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
