@@ -1,52 +1,14 @@
 .body1 {
-    background-image: url("../img/KOBE3.png");
     background-color: transparent;
     background-size: cover;
     position: fixed;  
-    background-repeat: round;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    z-index: -1;
+    margin: 0px;
 }
 
-.body2 {
-    background-image: url("../img/KOBE2.jpg");
-    background-color: transparent;
-    background-size: cover;
-    position: fixed;  
-    background-repeat: round;
-    width: 100%;
-    height: 100%;
-}
-
-.body3 {
-    background-image: url("../img/Lakersplan.jpg");
-    background-color: transparent;
-    background-size: cover;
-    position: fixed;  
-    background-repeat: round;
-    width: 100%;
-    height: 100%;
-}
-
-.body4 {
-    background-image: url("../img/Lakersplan.jpg");
-    background-color: transparent;
-    background-size: cover;
-    position: fixed;  
-    background-repeat: round;
-    width: 100%;
-    height: 100%;
-}
-
-.body5 {
-    background-image: url("../img/KOBE5.jpg");
-    background-color: transparent;
-    background-size: cover;
-    position: fixed;  
-    background-repeat: round;
-    width: 100%;
-    height: auto;
-}
 
 .container {
     height: 100vh;
@@ -59,10 +21,11 @@
     "ma ma ma";
 }
 
-.familjebild {
+.familypic {
     border:  4px solid white;
     width: 700px;
     height: auto;
+    margin: auto;
 }
 
 .container2 {
@@ -96,6 +59,10 @@
     padding-left: 50px;
 }
 
+ p {
+        font-style: italic;
+    }
+
 .kobe24 { 
 width: 200px;
 height: auto;
@@ -107,6 +74,18 @@ height: auto;
     height: auto;
 }
 
+#video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 1920px;
+    height: 1080px;
+   filter: brightness(60%);
+    }
+
+
 .aside2 {
     display: grid;
     grid-area: as2;
@@ -116,13 +95,10 @@ height: auto;
     
 }
 
-header {
-    display: grid;
-    grid-area: hd;
-    align-items: left;
-    justify-content: left;
-    padding: 0px 100px;
+.infofamily {
+    font-size: 25px;
 }
+
 
 nav {
     grid-area: nav;
@@ -132,8 +108,12 @@ nav {
     padding-left: 600px;
 }
 
-.hiddenkobe {
+.kobeshortinfo {
     display: none;
+}
+
+.main1 {
+    padding-bottom: 150px;
 }
 
 .main3 {
@@ -143,6 +123,7 @@ nav {
 }
 
 .main4 {
+    grid-area: ma;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -162,6 +143,18 @@ nav {
         
 }
 
+.headerall {
+    display: grid;
+    grid-area: hd;
+    align-items: left;
+    justify-content: left;
+    padding-left: 100px;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
 .sec1 {
     grid-column: 1;
     margin: 15px;
@@ -177,33 +170,22 @@ nav {
     margin: 15px;
 }
 
-.KobeSec1 {
+.kobesec1 {
     border:  4px solid white;
-    height: 400px;
-    width: 270px;
+    height: 60vh;
+    width: 25vw;
 }
 
-.KobeSec2 {
+.kobesec2 {
     border:  4px solid white;
-    height: 400px;
-    width: 270px;
+    height: 60vh;
+    width: 25vw;
 }
 
-
-.KobeSec3 {
+.kobesec3 {
     border:  4px solid white;
-    height: 400px;
-    width: 270px;
-}
-
-
-
-.familjetext {
-font-size: 30px;
-}
-
-.lakerstext {
-font-size: 50px;
+    height: 60vh;
+    width: 25vw;
 }
 
 a {
@@ -216,7 +198,13 @@ a:hover {
     color: black;
 }
 
-.Knappar {
+.current {
+    color: goldenrod;
+    display: block;
+    width: 100%;
+}
+
+.buttons {
         display: flex;
         background-color: transparent;
         font-size: 16px;
@@ -225,23 +213,13 @@ a:hover {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.Knapp1:hover {
+.button:hover {
     background: white;
     color: black;
 }
-.Knapp2:hover {
-    background: white;
-    color: black;
-}
-.Knapp3:hover {
-    background: white;
-    color: black;
-}
-.Knapp4:hover {
-    background: white;
-    color: black;
-}
-.Knapp1 {
+
+
+.button {
     background-color: transparent;
     color: white;
     padding: 15px 32px;
@@ -254,23 +232,10 @@ a:hover {
     margin: 12px;
   }
 
-  .Knapp2 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 12px;
-  }
-
-  .Knapp2-Sida3 {
+  .button-active {
     background-color: white;
     color: black;
-    padding: 15px 32px;
+    padding: 15px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -279,60 +244,6 @@ a:hover {
     border: 2px solid whitesmoke;  
     margin: 12px;
   }
-  
-  .Knapp3 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 12px;
-  }
-
-  .Knapp3-sida4 {
-    background-color: white;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid whitesmoke;  
-    margin: 12px;
-  }
-
-  .Knapp4-sida5 {
-    background-color: white;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid whitesmoke;  
-    margin: 12px;
-  }
-
-  
-  .Knapp4 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 12px;
-  }
-
 
 main {
     display: grid;
@@ -348,31 +259,27 @@ main {
     padding: 50px 100px;
 }
 
-.Logga {
+.logo {
     width: 150px;
     height: auto;  
     padding: 5px;  
 }
 
-.hiddenhistoria {
-    display: none;
-}
-
-.Kobe1 {
+.middletitle {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 100px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.Kobe1p {
+.kobelonginfo {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 22px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
-.burgarmenuitems {
+.burgermenuitems {
     color: white;
     text-transform: uppercase;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -386,7 +293,7 @@ main {
     z-index: 1;
  }
 
- .burgar {
+ .burger {
     display: none;
     position: absolute;
     z-index: 3;
@@ -420,102 +327,42 @@ main {
   }
   
 
-@media only screen and (max-width: 500px) {
-     .body1 {
-    background-image: url("../img/Kobe6.jpg");
-    background-position: unset;
-    background-color: transparent;
-    background-size: auto; 
-    background-repeat: round;
-    width: auto;
-    height: 100%;
-    margin-left: 0px;
-}
-
-.body2 {
-        background-image: url("../img/Kobe10.jpg.jpg");
-        background-position: unset;
+@media only screen and (max-width: 960px) {
+    .body1 {
+        position: fixed;
         background-color: transparent;
-        background-size: auto; 
-        background-repeat: round;
+        background-size: cover; 
+        background-repeat: no-repeat;
         width: auto;
         height: 100%;
         margin-left: 0px;
+        z-index: -1;
         margin: 0px;
-     }
-
-     .body3 {
-        background-image: url("../img/Kobe7.jpg");
-        background-position: unset;
-        background-color: transparent;
-        background-size: auto; 
-        background-repeat: round;
-        width: auto;
-        height: 100%;
-        margin-left: 0px;
-        margin: 0px;
-     }
-
-     .body4 {
-        background-image: url("../img/Kobe10.jpg.jpg");
-        background-position: unset;
-        background-color: transparent;
-        background-size: auto; 
-        background-repeat: round;
-        width: auto;
-        height: 100%;
-        margin-left: 0px;
-        margin: 0px;
-     }
-
-     .body5 {
-        background-image: url("../img/Kobe10.jpg.jpg");
-        background-position: unset;
-        background-color: transparent;
-        background-size: auto; 
-        background-repeat: round;
-        width: auto;
-        height: 100%;
-        margin-left: 0px;
-        margin: 0px;
-     }
+    }
 
 
-
-     .KobeSec1 {
+     .kobesec1 {
         border: 2px solid transparent;
         height: 0px;
         width: auto;
     }
     
-    .KobeSec2 {
+    .kobesec2 {
         border: 2px solid transparent;
         height: 0px;
         width: auto;
     }
     
     
-    .KobeSec3 {
+    .kobesec3 {
         border: 2px solid transparent;
         height: 0px;
         width: auto;
-    }
+   }
 
 
 
 .container {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows:  15% 85% auto;
-    grid-template-areas: 
-    "hd"
-    "nav"
-    "ma";
-}
-
-.container2 {
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -527,56 +374,119 @@ main {
     "ma";
 }
 
-.main2 {
-    font-size: 25px;
-    padding: 0px 75px; 
-    padding-bottom: 150px;
+.container2 {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:  15% 85%;
+    grid-template-areas: 
+    "hd" 
+    "ma";
 }
 
-.hiddenkobe {
+.container3 {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:  15% 0% 85%;
+    grid-template-areas: 
+    "hd"
+    "nav"
+    "ma";
+}
+
+.kobeshortinfo {
     display: block;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.Kobe1p {
+.kobelonginfo {
     display: none;
 }
 
-.hiddenhistoria {
+.hiddenhistory {
     display: block;
     font-size: 35px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
 }
 
-#hiddenlogga {
+
+.text {
+    font-size: 25px;
+}
+
+main {
+    height: 60vh;
+    font-size: 23px;
+}
+    
+.main1 {
+    padding: 0px 50px;
+    padding-bottom: 0px;
+}
+
+.main2 {
+    padding: 0px 50px; 
+    vertical-align: top;
+}
+
+.main3 {
+    padding: 0px 50px;
+    vertical-align: top;
+    font-size: 23px;
+}
+
+
+.main4 {
+    padding: 0px 50px;
+    vertical-align: top;
+}
+
+
+.main5 {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px 0px;
+    overflow-x: hidden;
+      overflow-y: scroll;
+    justify-content: space-evenly;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sec1" 
+    "sec2" 
+    "sec3";
+    
+}
+
+.aside1 {
     display: none;
+    grid-area: as1;
+    align-items: center;
+    justify-content: left;
+    margin: 10%;
+    padding-left: 50px;
 }
 
-.he2 {
-    margin-bottom: 20px;
-    text-align: center;
-
-}
-
-header {
-    display: grid;
-    grid-area: hd;
+.aside2 {
+    display: none;
+    grid-area: as2;
     align-items: center;
     justify-content: center;
-    padding: 0px 100px;
-    margin-right: 0px;
+    padding-right: 50px;
+    
+}
+
+.headerall {
+    display: grid;
+    border-bottom:  4px solid white;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
-}
-
-.Knappar {
-    display: grid;
-    background-color: transparent;
-    font-size: 16px;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 0.4s;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 0px;
 }
 
 nav {
@@ -587,111 +497,68 @@ nav {
     margin-right: 50px;
 }
  
-.Knapp1 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 5px;
-    margin-top: 100px;
-  }
-
-  .Knapp2 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 5px;
-  }
-
-  .Knapp3 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 5px;
-  }
-
-  .Knapp4 {
-    background-color: transparent;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid white;  
-    margin: 5px;
-  }
-
-  .Knapp2-Sida3 {
-    background-color: white;
-    color: black;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid whitesmoke;  
-    margin: 5px;
-  }
-
-  .Knapp3-Sida4 {
-    background-color: white;
-    color: black;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid whitesmoke;  
-    margin: 5px;
-  }
-
-.Knapp4-sida5 {
-    background-color: white;
-    color: black;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    float: left;
-    border: 2px solid whitesmoke;  
-    margin: 5px;
-  }
-
-  .Kobe1 {
+  .middletitle {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 0px;
+    font-size: 40px;
     margin-top: 0px;
     margin-bottom: 0px;
+    display: block;
   }
 
-  .burgar {
+  .burger {
       display: block;
   }
 
   .menu {
       display: none;
   }
+
+  .kobesec1 {
+      grid-area: sec1;
+    border:  4px solid white;
+    height: auto;
+    width: 80vw;
+}
+
+.kobesec2 {
+    grid-area: sec2;
+    border:  4px solid white;
+    height: auto;
+    width: 80vw;
+}
+
+
+.kobesec3 {
+    grid-area: sec3;
+    border:  4px solid white;
+    height: auto;
+    width: 80vw;
+}
+
+.sec1 {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 15px;
+}
+
+.sec2 {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 15px;
+}
+
+
+.sec3 {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 15px;
+}
+
+.familypic {
+    border:  4px solid white;
+    width: 95%;
+    height: auto;
+    
+}
 
 }
